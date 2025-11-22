@@ -1,0 +1,234 @@
+
+@import url('https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap');
+
+/*  CSS RESET & GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't break layout width */
+}
+
+body {
+    font-family: 'Baloo Bhai', cursive;
+    color: white;
+    /* Updated background path relative to css folder */
+    background: url('../images/anastase-maragos-fG0p4Qh_aWI-unsplash.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* HEADER & NAVIGATION (Modernized with Flexbox) */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background for readability */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo Area */
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left img {
+    width: 60px; /* Reduced size for better fit */
+    filter: invert(100%);
+    margin-right: 15px;
+}
+
+.left div {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Navbar Links */
+.mid {
+    flex-grow: 1; /* Pushes navbar to take available space */
+    text-align: center;
+}
+
+.navbar {
+    list-style: none;
+}
+
+.navbar li {
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.navbar li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar li a:hover,
+.navbar li a.active {
+    color: #1ce1db; /* Cyan color matching your buttons */
+    text-decoration: underline;
+}
+
+/* Header Buttons */
+.right {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    font-family: 'Baloo Bhai', cursive;
+    background-color: black;
+    color: white;
+    padding: 8px 20px;
+    border: 2px solid #1ce1db;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none; /* For links styled as buttons */
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #303132;
+    color: #1ce1db;
+}
+
+.btn a {
+    color: inherit; /* Inherit text color from parent button */
+    text-decoration: none;
+}
+
+/* 4. MAIN CONTAINER & FORMS */
+.container {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay so text pops */
+    border: 2px solid white;
+    margin: 80px auto; /* Centers the container */
+    padding: 40px;
+    width: 90%;
+    max-width: 800px; /* Prevents it from getting too wide on large screens */
+    border-radius: 28px;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: #1ce1db;
+    text-transform: uppercase;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    font-family: 'Baloo Bhai', cursive;
+    text-align: center;
+    display: block;
+    width: 100%; /* Responsive width */
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 20px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #1ce1db;
+    background-color: white;
+}
+
+.container button.btn {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: block;
+}
+
+/* 5. VIRTUAL TRAINING SECTION */
+h2 {
+    font-size: 40px;
+    margin-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1ce1db;
+}
+
+img.exercise-img {
+    display: block;
+    margin: 20px auto;
+    border: 5px solid white;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+p.description {
+    text-align: center;
+    width: 80%;
+    margin: 10px auto;
+    font-size: 18px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* 6. UTILITIES & ALERTS */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* 7. RESPONSIVE DESIGN (Mobile Support) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .mid {
+        margin: 20px 0;
+    }
+    
+    .navbar li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .container {
+        width: 95%;
+        margin-top: 20px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+}

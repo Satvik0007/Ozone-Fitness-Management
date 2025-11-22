@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="left">
+            <img src="images/studio_logo_A4BAAE6E75C607.png" alt="Logo">
+            <div>Ozone Fitness</div>
+        </div>
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Aboutus.html">About Us</a></li>
+                <li><a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm" target="_blank">Fitness Calculator</a></li>
+                <li><a href="bla.html">Rich protein source</a></li>
+                <li><a href="Achievment.html">Achievements</a></li>
+                <li><a href="virtual%20training.html">Virtual training</a></li>
+                <li><a href="Feedback%20form.html">Feed back</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Payment Gateway</h1>
+        <div style="background-color: white; padding: 20px; color: black; border-radius: 10px;">
+            <h2>Step 1: Scan to Pay</h2>
+            <p>You can pay directly to the account below or scan the QR Code.</p>
+            <br>
+            <!-- Update this image name if needed -->
+            <img src="images/WhatsApp%20Image%202021-07-07%20at%209.42.59%20PM.jpeg" style="width: 300px; display: block; margin: 0 auto; border: 2px solid black;" alt="QR Code">
+            <br>
+            <p style="font-weight: bold; font-size: 18px;">Account No: 377301500694</p>
+            <p style="font-weight: bold; font-size: 18px;">IFSC Code: ICICI00012</p>
+        </div>
+
+        <br>
+        <hr style="border: 1px solid white;">
+        <br>
+
+        <h1>Step 2: Confirm Payment</h1>
+        <p>If payment is done, please fill in the Transaction ID below:</p>
+        <form action="tid.php" method="post">
+            <div class="form-group">
+                <input type="text" name="tid" placeholder="Enter your Transaction ID (e.g., UPI Ref No)" required>
+            </div>
+            <button class="btn" type="submit">Submit Reference ID</button>
+        </form>
+    </div>
+</body>
+</html>
